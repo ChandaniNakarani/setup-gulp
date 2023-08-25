@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GULP DEMO 2022</title>
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+		rel="stylesheet">
+	<!-- general CSS -->
+	<link rel="stylesheet" type="text/css" href="../dist/assets/css/app.min.css">
+</head>
+
+<body>
+	<h1>Heading</h1>
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, at.</p>
+
+
+
+	<!-- calculater -->
+	<h2>CALCULATER</h2>
+	<div class="calculator">
+		<input type="text" id="display" readonly>
+		<div class="buttons">
+			<button onclick="appendToDisplay('1')">1</button>
+			<button onclick="appendToDisplay('3')">3</button>
+			<button onclick="appendToDisplay('4')">4</button>
+			<button onclick="appendToDisplay('5')">5</button>
+			<button onclick="appendToDisplay('6')">6</button>
+			<button onclick="appendToDisplay('7')">7</button>
+			<button onclick="appendToDisplay('8')">8</button>
+			<button onclick="appendToDisplay('9')">9</button>
+			<button onclick="appendToDisplay('0')">0</button>
+
+			<!-- More number buttons... -->
+			<button class="operator" onclick="appendToDisplay('+')">+</button>
+			<button class="operator" onclick="appendToDisplay('-')">-</button>
+			<button class="operator" onclick="appendToDisplay('*')">*</button>
+			<button class="operator" onclick="appendToDisplay('/')">/</button>
+			<button id="clear" onclick="clearDisplay()">C</button>
+			<button id="calculate" onclick="calculate()">=</button>
+		</div>
+	</div>
+
+	<div>
+		<h1 id="temp"></h1>
+	</div>
+
+	<div>
+		<h1>Login</h1>
+		<form id="loginForm">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username"><br><br>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"><br><br>
+
+			<button type="button" onclick="checkLogin()">Login</button>
+		</form>
+		<p class="message" id="loginMessage"></p>
+	</div>
+
+	<div>
+		<h1>Calculator</h1>
+
+		<form id="calculatorForm">
+			<label for="num1">Number 1:</label>
+			<input type="text" id="num1" name="num1"><br><br>
+
+			<label for="operator">Operator:</label>
+			<select id="operator" name="operator">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select><br><br>
+
+			<label for="num2">Number 2:</label>
+			<input type="text" id="num2" name="num2"><br><br>
+
+			<button type="button" onclick="calculate()">Calculate</button>
+		</form>
+
+		<p id="result"></p>
+	</div>
+
+
+	<div>
+		<h1>Temperature Converter</h1>
+
+		<form id="converterForm">
+			<label for="temperature">Temperature:</label>
+			<input type="number" id="temperature" name="temperature"><br><br>
+
+			<label for="unit">Unit:</label>
+			<select id="unit" name="unit">
+				<option value="celsius">Celsius</option>
+				<option value="fahrenheit">Fahrenheit</option>
+			</select><br><br>
+		</form>
+			<button type="button" onclick="convertTemperature()">Convert</button>
+			<p id="convertedResult"></p>
+		</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- general JS -->
+				<script src="../dist/assets/js/app.js"></script>
+</body>
+
+</html>
